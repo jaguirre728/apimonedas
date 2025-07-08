@@ -5,7 +5,7 @@ RUN mvn clean install -DskipTests
 
 
 FROM openjdk:17-jdk-alpine
-COPY /app/presentacion/target/presentacion-0.0.1|-SNAPSHOT.jar app
-EXPOSE 8080
+COPY --from=build /app/presentacion/target/presentacion-0.0.1|-SNAPSHOT.jar app
+EXPOSE 8081
 CMD ["java",".jar", "app.jar"]
 
