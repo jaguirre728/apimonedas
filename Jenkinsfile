@@ -4,12 +4,13 @@ pipeline{
     environment{
         DOCKER_IMAGE = 'apimonedastt'
         CONTAINER_NAME = 'dockerapimonedastt'
-        DOCKER_NETWORK = 'dockermonedas_red'
+        DOCKER_NETWORK = 'redmonedastt'
         HOST_PORT = '9080'
         CONTAINER_PORT = '8080'
     }
 
     stages{
+    
         stage('Construir imagen'){
             steps{
                 
